@@ -62,6 +62,9 @@ npm install -g @gitlink-ai/cli
 
 # Install CLI SKILL (required, works on all platforms)
 gitlink-cli-install-skills
+
+# Install CLI SKILL with 'npx'
+npx skills add ccfos/gitlink-cli/skills -y -g 
 ```
 
 **Option 2 — From source:**
