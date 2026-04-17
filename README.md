@@ -1,7 +1,7 @@
 # gitlink-cli
 
 [![GitLink](https://img.shields.io/badge/GitLink-Gitlink%2Fgitlink--cli-green)](https://www.gitlink.org.cn/Gitlink/gitlink-cli)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE)
+[![License](https://img.shields.io/badge/License-MulanPSL--2.0-blue.svg)](https://license.coscl.org.cn/MulanPSL2)
 [![Go Version](https://img.shields.io/badge/Go-1.26%2B-blue.svg)](https://golang.org)
 [![npm version](https://img.shields.io/npm/v/@gitlink-ai/cli.svg)](https://www.npmjs.com/package/@gitlink-ai/cli)
 
@@ -17,7 +17,7 @@ The official [GitLink](https://www.gitlink.org.cn) CLI tool — built for humans
 - **Wide Coverage** — Repository, Issue, PR, Branch, Release, CI, Org, Search, User — all core domains covered
 - **AI-Friendly & Optimized** — Every command is tested with real Agents, featuring concise parameters, smart defaults, and structured output
 - **Cross-Platform** — Runs on macOS, Linux, and Windows (x64/arm64), install via `npm` in one command
-- **Open Source, Zero Barriers** — Apache 2.0 license, ready to use, just `npm install`
+- **Open Source, Zero Barriers** — MulanPSL-2.0 license, ready to use, just `npm install`
 - **Up and Running in 3 Minutes** — Interactive login or `GITLINK_TOKEN` env var, from install to first API call in just 3 steps
 - **Secure & Controllable** — OS-native keychain credential storage, `GITLINK_TOKEN` env var for CI/CD & non-interactive environments, auto git remote context resolution
 - **Three-Layer Architecture** — Shortcuts (human & AI friendly) → Raw API (full coverage) → Config (configuration management)
@@ -390,4 +390,4 @@ See [skills/gitlink-shared/REFERENCE.md](skills/gitlink-shared/REFERENCE.md).
 
 ## License
 
-[Apache License 2.0](LICENSE)
+[MulanPSL-2.0](https://license.coscl.org.cn/MulanPSL2)

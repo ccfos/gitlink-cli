@@ -1,7 +1,7 @@
 # gitlink-cli
 
 [![GitLink](https://img.shields.io/badge/GitLink-Gitlink%2Fgitlink--cli-green)](https://www.gitlink.org.cn/Gitlink/gitlink-cli)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE)
+[![License](https://img.shields.io/badge/License-MulanPSL--2.0-blue.svg)](https://license.coscl.org.cn/MulanPSL2)
 [![Go Version](https://img.shields.io/badge/Go-1.26%2B-blue.svg)](https://golang.org)
 [![npm version](https://img.shields.io/npm/v/@gitlink-ai/cli.svg)](https://www.npmjs.com/package/@gitlink-ai/cli)
 
@@ -17,7 +17,7 @@
 - **广泛覆盖** — 仓库、Issue、PR、分支、Release、CI、组织、搜索、用户 — 核心功能全覆盖
 - **AI 友好 & 优化** — 每条命令都经过真实 Agent 测试，简洁参数、智能默认值、结构化输出
 - **跨平台** — macOS、Linux、Windows (x64/arm64) 全支持，`npm` 一条命令安装
-- **开源零门槛** — Apache 2.0 许可证，`npm install` 即用
+- **开源零门槛** — 木兰宽松许可证第2版（MulanPSL-2.0），`npm install` 即用
 - **3 分钟上手** — 交互式登录或 `GITLINK_TOKEN` 环境变量，从安装到首次 API 调用仅需 3 步
 - **安全可控** — OS 原生 keychain 凭证存储，`GITLINK_TOKEN` 环境变量支持 CI/CD 和非交互环境，自动 git remote 上下文解析
 - **三层架构** — Shortcuts（人+AI友好）→ Raw API（全覆盖）→ Config（配置管理）
@@ -390,4 +390,4 @@ gitlink-cli 使用 Windows Credential Manager 安全存储 Token。如果 Creden
 
 ## 许可证
 
-[Apache License 2.0](LICENSE)
+[MulanPSL-2.0](https://license.coscl.org.cn/MulanPSL2)
