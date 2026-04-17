@@ -323,7 +323,7 @@ gitlink-cli/
 │   ├── gitlink-pm/           # 项目管理 Skill
 │   └── ...
 ├── doc/                      # 设计文档
-│   ├── SKILLS_TEST_REPORT_2026-04-02.md
+│   ├── Design.md
 │   ├── CODE_SYNC_STRATEGY_FINAL.md
 │   └── ...
 ├── main.go
@@ -390,10 +390,6 @@ A: gitlink-cli 使用 Windows Credential Manager 安全存储 Token。如果 Cre
 ### Q: 如何查看完整的 API 参考？
 
 A: 查看 [skills/gitlink-shared/REFERENCE.md](skills/gitlink-shared/REFERENCE.md)
-
-## 相关项目
-
-- [gitlink-bisync](https://www.gitlink.org.cn/wbtiger/gitlink-bisync) - GitHub ↔ GitLink 代码双向同步系统
 
 ## 许可证
 
