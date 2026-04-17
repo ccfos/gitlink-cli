@@ -336,8 +336,6 @@ gitlink-cli/
 
 - [Skills 使用指南](skills/README.md) - AI Agent Skills 详细说明
 - [设计文档](doc/design.md) - 架构设计和开发计划
-- [测试报告](doc/SKILLS_TEST_REPORT_2026-04-02.md) - 功能测试报告
-- [代码同步方案](doc/CODE_SYNC_STRATEGY_FINAL.md) - GitHub ↔ GitLink 同步设计
 
 ## 常见问题
 
