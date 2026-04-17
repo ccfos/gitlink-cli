@@ -1,0 +1,45 @@
+{
+  "name": "@gitlink-ai/cli",
+  "version": "0.1.13",
+  "description": "GitLink 平台官方命令行工具 — 代码托管、协作开发和自动化",
+  "bin": {
+    "gitlink-cli": "bin/cli.js",
+    "gitlink-cli-install-skills": "bin/install-skills.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/install.js"
+  },
+  "keywords": [
+    "gitlink",
+    "cli",
+    "git",
+    "devops",
+    "code-hosting"
+  ],
+  "author": "GitLink <support@gitlink.org.cn>",
+  "license": "Apache-2.0",
+  "homepage": "https://www.gitlink.org.cn/Gitlink/gitlink-cli",
+  "repository": {
+    "type": "git",
+    "url": "https://www.gitlink.org.cn/Gitlink/gitlink-cli.git"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "files": [
+    "bin/cli.js",
+    "bin/install-skills.js",
+    "scripts/",
+    "skills/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=14"
+  }
+}
