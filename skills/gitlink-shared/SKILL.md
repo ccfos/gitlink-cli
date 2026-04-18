@@ -205,6 +205,47 @@ gitlink-cli repo +push
 - **写入/删除操作前必须确认用户意图**
 - 危险操作（删除仓库、删除分支等）需二次确认
 
+## ⚠️ PR 协作流程（Fork-based）
+
+向他人仓库（非自己拥有的仓库）提交 PR 时，**必须走 Fork 流程**，禁止直接往主仓库推分支。
+
+### 正确流程
+
+```bash
+# 1. Fork 目标仓库（在 GitLink 网页或 CLI 操作）
+gitlink-cli repo +fork --owner TargetOrg --repo target-repo
+
+# 2. Clone 自己的 Fork
+git clone https://www.gitlink.org.cn/MyUser/target-repo.git
+cd target-repo
+
+# 3. 添加 upstream remote
+git remote add upstream https://www.gitlink.org.cn/TargetOrg/target-repo.git
+
+# 4. 创建分支、修改、提交
+git checkout -b fix/my-change
+# ... 修改文件 ...
+git add -A && git commit -m "fix: my change"
+
+# 5. Push 到自己的 Fork（不是 upstream）
+git push origin fix/my-change
+
+# 6. 从 Fork 向主仓库提 PR
+gitlink-cli pr +create --owner TargetOrg --repo target-repo \
+  --head MyUser:fix/my-change --base master \
+  --title "fix: my change"
+```
+
+### 错误做法
+
+- ❌ `git clone` 主仓库 → 建分支 → `git push origin` → 提 PR（直接污染主仓库）
+- ❌ 即使有写权限也不要直接往主仓库推分支
+
+### 例外
+
+- 用户明确要求「直接 push」或「不用 Fork」时，可以直接推分支提 PR
+- 除此之外，即使是仓库 admin/owner 也应走 Fork 流程
+
 ## ⛔ 工具使用边界
 
 **GitLink 平台的操作必须通过 `gitlink-cli` 完成，不能用其他平台的 CLI 替代。**
