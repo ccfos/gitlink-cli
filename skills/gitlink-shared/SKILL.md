@@ -243,7 +243,8 @@ gitlink-cli pr +create --owner TargetOrg --repo target-repo \
 
 ### 例外
 
-- 自己拥有的仓库可以直接推分支提 PR（不需要 Fork 自己的仓库）
+- 用户明确要求「直接 push」或「不用 Fork」时，可以直接推分支提 PR
+- 除此之外，即使是仓库 admin/owner 也应走 Fork 流程
 
 ## ⛔ 工具使用边界
 

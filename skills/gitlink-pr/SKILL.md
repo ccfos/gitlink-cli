@@ -77,9 +77,9 @@ gitlink-cli pr +create --owner TargetOrg --repo target-repo \
   --title "fix: my change"
 ```
 
-> ⛔ **禁止直接往他人的主仓库推分支再提 PR，即使有写权限也不行。**
+> ⛔ **禁止直接往主仓库推分支再提 PR，即使有 admin 权限也不行。除非用户明确要求「直接 push」。**
 
-### 在自己仓库提 PR（可直接推分支）
+### 在自己仓库直接提 PR（仅限用户明确要求时）
 
 ```bash
 # 1. 创建分支
