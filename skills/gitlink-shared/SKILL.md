@@ -204,3 +204,37 @@ gitlink-cli repo +push
 - **禁止输出 Token** 到终端明文
 - **写入/删除操作前必须确认用户意图**
 - 危险操作（删除仓库、删除分支等）需二次确认
+
+## ⛔ 工具使用边界
+
+**GitLink 平台的操作必须通过 `gitlink-cli` 完成，不能用其他平台的 CLI 替代。**
+
+### 核心规则
+
+| 操作目标 | 正确工具 | 错误工具 |
+|----------|----------|----------|
+| GitLink 上的仓库/Issue/PR | `gitlink-cli` | `gh` / `hub` / `glab` |
+| GitHub 上的仓库/Issue/PR | `gh` | `gitlink-cli` |
+| GitLab 上的仓库/MR | `glab` | `gitlink-cli` / `gh` |
+
+**判断标准：看 remote URL 或用户指定的目标平台。**
+- remote 含 `gitlink.org.cn` → 用 `gitlink-cli`
+- remote 含 `github.com` → 用 `gh`
+- 用户明确说"推到 GitLink / 在 GitLink 上创建 PR" → 用 `gitlink-cli`
+
+### 常见错误
+
+当用户在 GitLink 项目中操作时：
+- ❌ `gh pr create ...` → `gh` 无法操作 GitLink，会报 command not found 或指向错误平台
+- ❌ `gh issue list ...` → 同上
+- ✅ `gitlink-cli pr +create ...` → 正确
+- ✅ `gitlink-cli issue +list ...` → 正确
+
+> **原则：哪个平台的事，用哪个平台的工具。GitLink 的事只用 `gitlink-cli`。**
+
+### 双平台场景
+
+用户可能同时使用 GitLink 和 GitHub（如双向同步项目）。此时：
+- 推送/PR 到 GitLink → `gitlink-cli`
+- 推送/PR 到 GitHub → `gh`
+- 根据用户意图和目标 remote 判断，不要混用

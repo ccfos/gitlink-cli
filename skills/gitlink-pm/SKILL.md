@@ -12,6 +12,8 @@ metadata:
 
 > **前置条件：** 先阅读 [`../gitlink-shared/SKILL.md`](../gitlink-shared/SKILL.md)
 
+**CRITICAL — GitLink 操作只能用 `gitlink-cli`。禁止用 `gh`（GitHub CLI）操作 GitLink 资源。`gh` 仅适用于 GitHub 平台。**
+
 GitLink PM 模块提供敏捷项目管理能力，目前通过 Raw API 访问。
 
 ## API 端点

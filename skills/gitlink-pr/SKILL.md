@@ -93,6 +93,7 @@ gitlink-cli api GET /:owner/:repo/pulls/get_branches
 
 ## 注意事项
 
+- ⛔ **GitLink 的 PR 操作必须用 `gitlink-cli pr`，不能用 `gh pr`。** `gh` 是 GitHub CLI，无法操作 GitLink 平台。详见 [`../gitlink-shared/SKILL.md`](../gitlink-shared/SKILL.md) 的「工具使用边界」章节。
 - GitLink 的默认分支通常是 `master`（非 `main`），创建 PR 时注意 `--base` 参数
 - 合并 PR 前建议先用 `pr +view` 确认状态
 - **PR 创建要求源分支与目标分支有实际代码差异**，否则返回"分支内容相同，无需创建合并请求"
