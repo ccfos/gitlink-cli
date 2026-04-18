@@ -52,7 +52,34 @@ gitlink-cli pr +files --id 14200
 
 ## 创建 PR 的完整流程
 
-PR 创建需要源分支有实际代码变更。完整流程：
+### 向他人仓库提 PR（Fork 流程，必须遵守）
+
+```bash
+# 1. Fork 目标仓库
+gitlink-cli repo +fork --owner TargetOrg --repo target-repo
+
+# 2. Clone 自己的 Fork
+git clone https://www.gitlink.org.cn/MyUser/target-repo.git
+cd target-repo
+git remote add upstream https://www.gitlink.org.cn/TargetOrg/target-repo.git
+
+# 3. 创建分支、修改、提交
+git checkout -b fix/my-change
+# ... 修改文件 ...
+git add -A && git commit -m "fix: my change"
+
+# 4. Push 到自己的 Fork（不是 upstream）
+git push origin fix/my-change
+
+# 5. 从 Fork 向主仓库提 PR
+gitlink-cli pr +create --owner TargetOrg --repo target-repo \
+  --head MyUser:fix/my-change --base master \
+  --title "fix: my change"
+```
+
+> ⛔ **禁止直接往他人的主仓库推分支再提 PR，即使有写权限也不行。**
+
+### 在自己仓库提 PR（可直接推分支）
 
 ```bash
 # 1. 创建分支
